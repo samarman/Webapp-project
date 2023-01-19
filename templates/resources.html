@@ -1,0 +1,24 @@
+<!-- templates/resources.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/styles2.css">
+    <title>Coding Resources</title>
+</head>
+<body>
+    <h1>Coding Resources</h1>
+    {% if resources %}
+    <div class="card-group">
+        {% for resource in resources %}
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Link: <a href="{{ resource[1] }}">{{ resource[1] }}</a></h5>
+                    <p class="card-text">Comment: {{ resource[2] }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    {% else %}
+        <p>No resources found.</p>
+    {% endif %}
+</body>

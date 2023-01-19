@@ -1,0 +1,20 @@
+<!-- templates/index.html -->
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/styles.css">
+        <title>Coding Resources</title>
+    </head>
+    <body>
+        <h1>Submit a resource</h1>
+        <form action="/submit" method="post">
+            <label for="link">Link:</label>
+            <input type="text" id="link" name="link" required>
+            <br>
+            <label for="comment">Comment:</label>
+            <input type="text" id="comment" name="comment" required>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
